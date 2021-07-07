@@ -1,7 +1,7 @@
-
 export {
   Doc,
   Transaction,
+  observeTypeCreated,
   YArray as Array,
   YMap as Map,
   YText as Text,
@@ -81,5 +81,5 @@ export {
   encodeRelativePosition,
   decodeRelativePosition,
   diffUpdate,
-  diffUpdateV2
-} from './internals.js'
+  diffUpdateV2,
+} from "./internals.js";
