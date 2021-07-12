@@ -29,7 +29,23 @@ const debugResolve = {
         return `${process.cwd()}/../${importee}`;
       }
     }
-    return null;
+    return null
+  }
+}
+
+export default [{
+  input: './src/index.js',
+  output: {
+    name: 'Y',
+    file: 'dist/yjs.cjs',
+    format: 'cjs',
+    sourcemap: true,
+    paths: path => {
+      if (/^lib0\//.test(path)) {
+        return `lib0/dist/${path.slice(5)}.cjs`
+      }
+      return path
+    }
   },
 };
 
