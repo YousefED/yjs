@@ -22,8 +22,7 @@
     "debug": "concurrently 'http-server -o test.html' 'npm run watch'",
     "trace-deopt": "clear && rollup -c  && node --trace-deopt dist/test.cjs",
     "trace-opt": "clear && rollup -c  && node --trace-opt dist/test.cjs",
-    "postinstall": "npm run dist && node ./sponsor-y.js",
-    "fixtsc": "replace-in-files --string='yjs/src/' --replacement='./' dist/src/*.ts && replace-in-files --string='yjs/src/' --replacement='../' dist/src/*/*.ts"
+    "postinstall": "node ./sponsor-y.js"
   },
   "exports": {
     ".": {
@@ -34,6 +33,13 @@
     "./tests/testHelper.js": "./tests/testHelper.js",
     "./package.json": "./package.json"
   },
+  "files": [
+    "dist/yjs.*",
+    "dist/src",
+    "src",
+    "tests/testHelper.js",
+    "sponsor-y.js"
+  ],
   "dictionaries": {
     "test": "tests"
   },

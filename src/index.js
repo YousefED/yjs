@@ -82,4 +82,4 @@ export {
   decodeRelativePosition,
   diffUpdate,
   diffUpdateV2,
-} from "./internals.js";
+} from './internals.js';
